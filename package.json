@@ -1,0 +1,31 @@
+{
+  "name": "grok-rc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Remote control for the Grok CLI. The agent stays on your computer. A phone or another browser drives it.",
+  "bin": {
+    "grok-rc": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "dev": "tsx src/cli.ts",
+    "test": "node --experimental-strip-types --test src/history.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.5",
+    "qrcode": "^1.5.4",
+    "tsx": "^4.20.3",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/qrcode": "^1.5.5",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.8.3"
+  }
+}
